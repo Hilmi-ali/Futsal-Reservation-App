@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_data"
+    android:padding="16dp"
+    android:layout_marginTop="12dp">
+    <!-- Arena -->
+    <TextView
+        android:id="@+id/arena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arena 1"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Nama Lokasi -->
+    <TextView
+        android:id="@+id/atasNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMAN 1 Majenang"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/arena"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Tanggal -->
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 Desember 2024"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@id/atasNama"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"/>
+
+    <!-- Container Waktu dan Durasi -->
+    <LinearLayout
+        android:id="@+id/timeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="160dp"
+        android:orientation="horizontal">
+
+        <!-- Waktu -->
+        <TextView
+            android:id="@+id/waktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:00"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- Durasi -->
+        <TextView
+            android:id="@+id/durasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1)"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

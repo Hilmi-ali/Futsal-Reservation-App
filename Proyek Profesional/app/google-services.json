@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "555512018764",
+    "project_id": "futsal-reservation-app",
+    "storage_bucket": "futsal-reservation-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555512018764:android:8abbb43ae154013d2141e9",
+        "android_client_info": {
+          "package_name": "com.example.reservationapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATjKp8rgaZkKMmtPMnZrL9ICsPV1vQP0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

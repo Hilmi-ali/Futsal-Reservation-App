@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/black"/> <!-- background putih -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@android:color/white"/> <!-- background putih -->
+            <corners android:radius="12dp"/> <!-- Sudut melengkung -->
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/> <!-- transparan untuk lapisan kedua -->
+            <size android:height="4dp"/> <!-- ukuran garis bawah -->
+        </shape>
+    </item>
+</layer-list>

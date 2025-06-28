@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Features.Cancel"
+    android:padding="25dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- Header Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PEMBATALAN PESANAN"
+            android:textStyle="bold"
+            android:fontFamily="@font/medium"
+            android:textSize="18dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jadwal Anda"
+            android:textSize="14sp"
+            android:textColor="#808080"
+            android:gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@android:drawable/editbox_background"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/atasNama"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="atasnama"
+                android:textSize="7pt"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="12dp" />
+            <TextView
+                android:id="@+id/arena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="atasnama"
+                android:textSize="7pt"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="12dp" />
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="atasnama"
+                android:textSize="7pt"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="12dp" />
+            <TextView
+                android:id="@+id/waktu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="atasnama"
+                android:textSize="7pt"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="12dp" />
+            <TextView
+                android:id="@+id/durasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="atasnama"
+                android:textSize="7pt"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alasan Pembatalan"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/editPembatalan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tulis Keterangan disini... "
+            android:background="@android:drawable/editbox_background"
+            android:padding="8dp"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp"
+            android:gravity="top"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Button Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ganti Jadwal"
+                android:background="@android:color/darker_gray"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnCancelOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="batalkan"
+                android:visibility="visible"
+                android:background="@android:color/holo_red_dark"
+                android:textColor="@android:color/white" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
