@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Pesanan from Firestore</title>
+
+    <!-- Firebase SDK v9+ Modular -->
+    <script type="module">
+      // Mengimpor Firebase SDK v9
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+
+      // Konfigurasi Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBBOjpbXXxExLdLPQLKJELbNk5rGvIznzI",
+        authDomain: "training-db911.firebaseapp.com",
+        projectId: "training-db911",
+        storageBucket: "training-db911.appspot.com",
+        messagingSenderId: "541436504999",
+        appId: "1:541436504999:web:5436fccfc364dc7e67a482",
+        measurementId: "G-88M6B4SZ0F",
+      };
+
+      // Inisialisasi Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app); // Mendapatkan Firestore
+
+      window.onload = function () {
+        // Mengambil data pesanan semua user
+        const ordersCollectionRef = collection(db, "orders");
+        getDocs(ordersCollectionRef)
+          .then((querySnapshot) => {
+            const tableBody = document
+              .getElementById("pesananTable")
+              .getElementsByTagName("tbody")[0];
+            querySnapshot.forEach((doc) => {
+              const data = doc.data();
+              const row = tableBody.insertRow();
+
+              const cellId = row.insertCell(0);
+              cellId.textContent = doc.id; // ID pesanan
+
+              const cellUser = row.insertCell(1);
+              cellUser.textContent = data.namaUser || "Tidak Diketahui";
+
+              const cellSepatu = row.insertCell(2);
+              cellSepatu.textContent = data.sepatu;
+
+              const cellMerk = row.insertCell(3);
+              cellMerk.textContent = data.merek;
+
+              const cellStatus = row.insertCell(4);
+              cellStatus.textContent = data.status;
+            });
+          })
+          .catch((error) => {
+            console.error("Error getting documents: ", error);
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <div>
+      <h3>Pesanan List from Firestore</h3>
+      <table id="pesananTable" border="1">
+        <thead>
+          <tr>
+            <th>ID Pesanan</th>
+            <th>Nama User</th>
+            <th>Sepatu</th>
+            <th>Merek</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data pesanan akan dimuat di sini -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
